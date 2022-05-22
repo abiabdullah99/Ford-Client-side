@@ -70,7 +70,7 @@ const Team = () => {
         <>
           {team.map((item) => (
             <SwiperSlide>
-              <div class="card w-10/12 mx-auto shadow-primary shadow-md h-[400px] rounded mt-20 mb-4">
+              <div class="card w-10/12 mx-auto shadow-primary shadow-md h-[400px] rounded mt-20 mb-12">
                 <figure>
                   <img src={item.img} alt="Shoes" className="h-72 w-60 py-4" />
                 </figure>
