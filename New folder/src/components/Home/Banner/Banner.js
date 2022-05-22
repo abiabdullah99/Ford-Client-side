@@ -28,13 +28,17 @@ const Banner = () => {
             <div class="hero-content flex-col lg:flex-row-reverse">
               <img className="" src={banner} alt="" />
               <div>
-                <h1 class="text-5xl font-bold text-primary">Box Office News!</h1>
+                <h1 class="text-5xl font-bold text-primary">
+                  Box Office News!
+                </h1>
                 <p class="py-6 text-secondary">
                   Provident cupiditate voluptatem et in. Quaerat fugiat ut
                   assumenda excepturi exercitationem quasi. In deleniti eaque
                   aut repudiandae et a id nisi.
                 </p>
-                <button class="btn btn-primary text-white text-md">Get Started</button>
+                <button class="btn btn-primary text-white text-md">
+                  Get Started
+                </button>
               </div>
             </div>
           </div>
@@ -45,13 +49,17 @@ const Banner = () => {
             <div class="hero-content flex-col lg:flex-row-reverse">
               <img className="w-9/12" src={banner1} alt="" />
               <div>
-                <h1 class="text-5xl font-bold text-primary">Box Office News!</h1>
+                <h1 class="text-5xl font-bold text-primary">
+                  Box Office News!
+                </h1>
                 <p class="py-6 text-secondary">
                   Provident cupiditate voluptatem et in. Quaerat fugiat ut
                   assumenda excepturi exercitationem quasi. In deleniti eaque
                   aut repudiandae et a id nisi.
                 </p>
-                <button class="btn btn-primary text-white text-md">Get Started</button>
+                <button class="btn btn-primary text-white text-md">
+                  Get Started
+                </button>
               </div>
             </div>
           </div>
