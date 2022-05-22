@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Grinding Mechine",
+         "img": "https://demo.zozothemes.com/factrie/wp-content/uploads/sites/25/2017/10/grinding-machine.jpg",
+         "price": 135,
+         "stock": 1500000,
+         "min-order": 10000,
+         "description": "Jet mill consisting of fluid bed opposed jet mill with integrated turbo classifier(s) for highest applications with best top cut and steep particle size distribution.There are various functions as mainly grinding"
+
+    },
+    {
+        "name": "Hand Drill Machine",
+         "img": "https://demo.zozothemes.com/factrie/wp-content/uploads/sites/25/2017/10/hand-drill-machine.jpg",
+         "price": 145,
+         "stock": 1500000,
+         "min-order": 10000,
+         "description": "A Hand-Held PCB Drill Machine is a tool with a place to fit driller bit, used for drilling holes in various materials or fastening various materials"
+
+    },
+    {
+        "name": "Hand Polishing Machine",
+         "img": "https://demo.zozothemes.com/factrie/wp-content/uploads/sites/25/2017/10/hand-polishing-machine.jpg",
+         "price": 128,
+         "stock": 1500000,
+         "min-order": 10000,
+         "description": "High Quality design The body is made of imported plastic, which allows the operator to use it more smoothly, while reducing the sense of vibration"
+
+    }
+
+]
