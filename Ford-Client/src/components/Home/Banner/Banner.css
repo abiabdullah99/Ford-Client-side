@@ -1,0 +1,6 @@
+.background{
+    background: url(../../../Assets/Banner/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px 0px;
+}
