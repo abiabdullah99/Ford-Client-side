@@ -1,6 +1,7 @@
 import React from "react";
 import about from "../../../Assets/Banner/aboutus.png";
 const About = () => {
+  
   return (
     <div>
       <div class="hero justify-center lg:px-20 mt-40 px-10">

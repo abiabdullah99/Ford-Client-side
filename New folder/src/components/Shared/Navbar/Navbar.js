@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { SiProtools } from "react-icons/si";
 const Navbar = ({ children }) => {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(true);
   const menuItems = (
     <>
       <li>
