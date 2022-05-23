@@ -22,14 +22,6 @@ const Navbar = ({ children }) => {
       </li>
       <li>
         <NavLink
-          to="/about"
-          className="rounded-md mr-2 text-secondary text-lg font-semibold p-0 px-5"
-        >
-          Products
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
           to="/blog"
           className="rounded-md mr-2 text-secondary text-lg font-semibold p-0 px-5"
         >
