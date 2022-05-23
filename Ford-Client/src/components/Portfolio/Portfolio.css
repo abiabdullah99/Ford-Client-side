@@ -1,22 +1,15 @@
-.bg {
-  background: url(../../Assets/portfolio/2.png);
-  background-position: right;
-  background-size: contain;
-  background-repeat: no-repeat;
+.timeline-content {
+  border-radius: 0px 60px 0px 60px;
+  padding: 20px 30px;
+  margin-bottom: 10px;
 }
-
-.timeline-content{
-   border-radius: 0px 60px 0px 60px;
-   padding: 20px 30px;
-   margin-bottom: 10px;
+.timeline-content h1 {
+  font-size: 32px;
+  font-weight: 700;
+  padding-bottom: 8px;
 }
-.timeline-content h1{
-    font-size: 32px;
-    font-weight: 700;
-    padding-bottom: 8px;
-}
-.timeline-content p{
-    text-align: justify;
+.timeline-content p {
+  text-align: justify;
 }
 @media only screen and (min-width: 768px) {
   .timeline:before {

@@ -12,6 +12,10 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Purchase from "./components/Order/Purchase";
 import NotFound from "./components/Shared/NotFound/NotFound";
+import DashBoard from "./components/Dashboard/DashBoard/DashBoard";
+import AddReview from "./components/Dashboard/AddReview/AddReview";
+import MyProfile from "./components/Dashboard/MyProfile/MyProfile";
+import MyOrders from "./components/Dashboard/MyOrder/MyOrders";
 const App = () => {
   return (
     <div>
@@ -30,6 +34,19 @@ const App = () => {
               </PrivateRoute>
             }
           ></Route>
+          {/* Dashboard part  */}
+          <Route
+            path="/dashboard"
+            element={
+              <PrivateRoute>
+                <DashBoard />
+              </PrivateRoute>
+            }
+          >
+            <Route path="review" element={<AddReview></AddReview>}></Route>
+            <Route path="profile" element={<MyProfile></MyProfile>}></Route>
+            <Route index element={<MyOrders></MyOrders>}></Route>
+          </Route>
           <Route path="*" element={<NotFound></NotFound>}></Route>
         </Routes>
         <Footer></Footer>

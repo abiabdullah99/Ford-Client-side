@@ -19,10 +19,10 @@ const Portfolio = () => {
               <p className="text-4xl font-bold text-primary py-4">
                 Junior Frontend Developer
               </p>
-              <p class="py-2 text-secondary text-xl">
-                I am Study Diploma In Computer Engineer
+              <p class="py-2 text-secondary text-xl font-semibold">
+                I am Study Diploma In Computer Engineering
               </p>
-              <p class="py-2 text-primary text-xl">
+              <p class="py-2 text-primary text-xl font-semibold">
                 My Email: Abiabdullah120469@gmail.com
               </p>
             </p>
