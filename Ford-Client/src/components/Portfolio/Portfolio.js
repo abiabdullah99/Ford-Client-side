@@ -1,13 +1,10 @@
 import React from "react";
-import camera from "../../Assets/portfolio/photograph.png";
-import food from "../../Assets/portfolio/food.png";
-import car from "../../Assets/portfolio/car.png";
-import mobile from "../../Assets/portfolio/mobile.png";
-import watch from "../../Assets/portfolio/watch.png";
-import personal from "../../Assets/portfolio/personal.png";
 import "./Portfolio.css";
 import Timeline from "./Timeline";
 import Skills from "./Skills";
+import MyProject from "./MyProject";
+import { BsFacebook, BsTwitter, BsInstagram, BsBehance } from "react-icons/bs";
+
 const Portfolio = () => {
   return (
     <div>
@@ -22,18 +19,24 @@ const Portfolio = () => {
               <p className="text-4xl font-bold text-primary py-4">
                 Junior Frontend Developer
               </p>
-              <p className="text-md font-bold text-secondary">
-                My Goal is to be a good full-stackdeveloper. I hope i can make
-                it by the blessing of Almighty and through my hardwork
+              <p class="py-2 text-secondary text-xl">
+                I am Study Diploma In Computer Engineer
+              </p>
+              <p class="py-2 text-primary text-xl">
+                My Email: Abiabdullah120469@gmail.com
               </p>
             </p>
-            <button class="btn btn-primary text-white text-xl rounded-md capitalize px-6">
-              Expolre
-            </button>
+            <div className="flex gap-5 mt-8 ml-4 text-primary justify-center">
+              <BsFacebook className=" text-3xl font-bold" />
+              <BsTwitter className=" text-3xl font-bold" />
+              <BsInstagram className=" text-3xl font-bold text-pr" />
+              <BsBehance className=" text-3xl font-bold text-pr" />
+            </div>
           </div>
         </div>
       </div>
       <Skills></Skills>
+      <MyProject></MyProject>
       <Timeline></Timeline>
     </div>
   );

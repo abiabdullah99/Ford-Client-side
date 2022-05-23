@@ -30,7 +30,8 @@ const Blogs = () => {
     },
     {
       head: "You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name",
-      name: "he includes() method returns either a true or a false if a value exists in an array or not. The indexOf() method returns the first index of a value in an array. If there is no match, the method returns -1",
+      content:
+        "he includes() method returns either a true or a false if a value exists in an array or not. The indexOf() method returns the first index of a value in an array. If there is no match, the method returns -1",
     },
     {
       head: "What is a unit test? Why should write unit tests?",
@@ -40,7 +41,10 @@ const Blogs = () => {
   ];
   return (
     <div>
-      <Accordion className="md:w-7/12 w-11/12 mx-auto mt-20" allowZeroExpanded={true}>
+      <Accordion
+        className="md:w-7/12 w-11/12 mx-auto mt-20"
+        allowZeroExpanded={true}
+      >
         {blogs.map((item) => (
           <AccordionItem key={item.id}>
             <AccordionItemHeading className="text-xl text-primary font-bold  px-10 py-4">

@@ -3,10 +3,10 @@ import firebase from "../../Assets/mySkills/firebase (2).png";
 import react from "../../Assets/mySkills/react.png";
 import html from "../../Assets/mySkills/html.png";
 import css from "../../Assets/mySkills/css.png";
-import nodejs from "../../Assets/mySkills/nodejs.png";
+import nodejs from "../../Assets/mySkills/node-js.png";
 import tailwind from "../../Assets/mySkills/tailwind-css.png";
 import bootstrap from "../../Assets/mySkills/bootstrap.png";
-import github from "../../Assets/mySkills/node-js.png";
+import github from "../../Assets/mySkills/github.png";
 import Javascript from "../../Assets/mySkills/js.png";
 import figma from "../../Assets/mySkills/figma.png";
 const Skills = () => {
@@ -65,10 +65,10 @@ const Skills = () => {
   return (
     <>
       <h1 className="text-center text-4xl font-bold text-primary mt-20">My Skills</h1>
-      <div className="grid  md:grid-cols-3 gap-4 grid-cols-2 lg:grid-cols-4 w-9/12 mx-auto">
+      <div className="grid  md:grid-cols-3  grid-cols-2 lg:grid-cols-4 w-9/12 mx-auto">
         {skills.map((item) => (
           <div key={item.id}>
-            <div className="flex-col  mt-20 shadow-primary shadow-md py-8 px-14 w-9/12 mx-auto h-44">
+            <div className="flex-col  mt-20 shadow-primary shadow-md py-6 px-14 w-52 mx-auto h-40">
               <div>
                 <img className="w-20 h-20" src={item.img} alt="" />
               </div>
