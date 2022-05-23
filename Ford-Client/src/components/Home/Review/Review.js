@@ -16,7 +16,7 @@ const Review = () => {
         slidesPerView={1}
         centeredSlides={true}
         autoplay={{
-          delay: 1500,
+          delay: 2000,
           disableOnInteraction: false,
         }}
         pagination={{

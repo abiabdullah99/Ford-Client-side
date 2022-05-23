@@ -36,6 +36,13 @@ const Team = () => {
       img: "https://img.freepik.com/free-photo/construction-worker-uniform-helmet-holding-hands-waist-looking-confident-front-view_176474-38678.jpg?t=st=1653190682~exp=1653191282~hmac=30c0e01ef3a17a30f3b89de5adc9a23f51be96ce4eaa12b4f04126ac529fc4a7&w=996",
       post: "Manager",
     },
+    {
+      id: 6,
+      name: "Nancy Momoland",
+      img: "https://pbs.twimg.com/media/EYvZbamXsAI49HL.jpg",
+      post: "Member",
+    },
+
   ];
   return (
     <>

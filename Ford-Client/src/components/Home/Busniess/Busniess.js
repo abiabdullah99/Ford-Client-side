@@ -18,15 +18,17 @@ const Busniess = () => {
           <p className="text-secondary text-2xl font-bold py-4">
             Annual Revenue
           </p>
-          <VisibilitySensor partialVisibility offset={{ bottom: 100 }}>
-            {({ isVisible }) => (
-              <div style={{ height: 100 }}>
-                {isVisible ? (
-                  <CountUp className="text-4xl text-primary" end={345252220} />
-                ) : null}
-              </div>
-            )}
-          </VisibilitySensor>
+          <span>
+            <VisibilitySensor partialVisibility offset={{ bottom: 100 }}>
+              {({ isVisible }) => (
+                <div style={{ height: 100 }}>
+                  {isVisible ? (
+                    <CountUp className="text-4xl text-primary" end={3452520} />
+                  ) : null}
+                </div>
+              )}
+            </VisibilitySensor>
+          </span>
         </div>
         <div className="mx-auto">
           <h1 className="text-6xl text-primary px-10">

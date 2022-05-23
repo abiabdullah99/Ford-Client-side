@@ -1,8 +1,12 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import useProducts from "../../../Hooks/UseProducts";
 const Product = () => {
   const [product] = useProducts();
-  console.log(product);
+  const navigate = useNavigate();
+  const navigateToDetails = (id) => {
+    navigate(`/purchase/${id}`);
+  };
   return (
     <div>
       <h2 className="text-center text-4xl font-bold mt-48 text-primary">
@@ -40,8 +44,11 @@ const Product = () => {
                 </p>
               </div>
               <div>
-                <button className="w-full bg-primary absolute bottom-0 py-2 mx-0 text-white text-xl font-bold">
-                  Order Now
+                <button
+                  onClick={() => navigateToDetails(item._id)}
+                  className="w-full bg-primary absolute bottom-0 py-2 mx-0 text-white text-xl font-bold"
+                >
+                  <Link to="/purchase">Order Now</Link>
                 </button>
               </div>
             </div>
