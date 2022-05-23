@@ -1,0 +1,64 @@
+.bg {
+  background: url(../../Assets/portfolio/2.png);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.timeline-content{
+   border-radius: 0px 60px 0px 60px;
+   padding: 20px 30px;
+   margin-bottom: 10px;
+}
+.timeline-content h1{
+    font-size: 32px;
+    font-weight: 700;
+    padding-bottom: 8px;
+}
+.timeline-content p{
+    text-align: justify;
+}
+@media only screen and (min-width: 768px) {
+  .timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+  }
+  .timeline ul li {
+    width: 50%;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    border-radius: 20px 0px 20px 20px;
+  }
+  .timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+    border-radius: 0px 20px 20px 20px;
+  }
+  .timeline ul li::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    top: 0px;
+  }
+  .timeline ul li:nth-child(odd)::before {
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+  .timeline ul li:nth-child(even)::before {
+    transform: translate(-50%, -50%);
+    left: -30px;
+  }
+}

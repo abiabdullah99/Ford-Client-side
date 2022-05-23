@@ -3,30 +3,61 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useParams } from "react-router-dom";
 import auth from "../../firebase.init";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 const Purchase = () => {
   const [user] = useAuthState(auth);
   const [order, setOrder] = useState([]);
+  const [newData, setNewData] = useState(false);
+  const [stockNumber, setStockNumber] = useState({
+    stock: "",
+  });
   const { id } = useParams();
   useEffect(() => {
     const url = `https://salty-fortress-85484.herokuapp.com/products/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setOrder(data));
-  }, [id]);
-  const { name, _id, img, minorder, stock, price } = order;
+  }, [id, newData]);
+
+  let name, value;
+  const getUserData = (e) => {
+    e.preventDefault();
+    name = e.target.name;
+    value = e.target.value;
+    setStockNumber({ ...stockNumber, [name]: value });
+  };
+  const { _id, img, minorder, stock, price } = order;
+
+  const handleUpdateStock = async (id, stock) => {
+    const { stockitem } = stockNumber;
+    console.log(stockitem);
+    console.log(stock)
+    const getStock = parseInt(stock) - parseInt(stockitem);
+    const newQuantity = {
+      stock: getStock.toString(),
+    };
+    console.log(newQuantity);
+    const url = `https://salty-fortress-85484.herokuapp.com/products/${id}`;
+    await axios.put(url, newQuantity).then((response) => {
+      const { data } = response;
+      if (data) {
+        setNewData(!newData);
+      }
+      console.log(data);
+    });
+  };
 
   const handleBooking = (event) => {
     event.preventDefault();
     const booking = {
       productId: _id,
-      product: name,
+      product: order.name,
       price,
       img,
       email: user.email,
       user: event.target.name.value,
       phone: event.target.phone.value,
-      minorder: event.target.minorder.value,
       address: event.target.address.value,
       stock,
     };
@@ -43,14 +74,8 @@ const Purchase = () => {
       });
   };
   return (
-    <form
-      onSubmit={handleBooking}
-      className="w-9/12 mx-auto grid grid-cols-1 my-10  items-center md:grid-cols-2"
-    >
-      <div className="flex flex-col">
-        <h1 className="text-2xl text-primary font-bold mb-5">
-          Your Information
-        </h1>
+    <div className="grid grid-cols-1 my-10 w-10/12 mx-auto items-center lg:grid-cols-2">
+      <form onSubmit={handleBooking} className="flex flex-col">
         <input
           type="text"
           name="name"
@@ -76,12 +101,17 @@ const Purchase = () => {
           placeholder="Phone Number"
           className="rounded input input-bordered border-2 border-primary text-secondary text-lg mb-5 w-full max-w-xs"
         />
-      </div>
+        <input
+          type="submit"
+          value="Confirm Order"
+          className="btn btn-primary rounded text-lg text-white w-5/ w-full max-w-xs"
+        />
+      </form>
       <div>
         <div className="mt-10">
           <img src={img} className="w-6/12" alt="" />
           <h1 className="pb-2 text-lg font-semibold text-secondary mt-4">
-            <span className="text-primary">Product:</span> {name}
+            <span className="text-primary">Product:</span> {order.name}
           </h1>
           <h1 className="pb-2 text-lg font-semibold text-secondary">
             <span className="text-primary">Price:</span> ${price}
@@ -93,15 +123,22 @@ const Purchase = () => {
             <span className="text-primary">Minimum Order:</span> {minorder}{" "}
             Pieces
           </h1>
+        </div>
+
+        <div>
           <input
             type="text"
-            name="minorder"
+            name="stock"
+            onChange={getUserData}
             placeholder="UpDate Minimum Order"
             className="rounded input input-bordered border-2 border-primary text-secondary text-lg mb-5 w-full max-w-xs"
           />
           <div className="flex gap-5 mb-10">
             <div>
-              <button className="btn btn-primary btn-outline border-2 rounded text-lg mx-auto text-white">
+              <button
+                onClick={() => handleUpdateStock(_id, order.stock)}
+                className="btn btn-primary btn-outline border-2 rounded text-lg mx-auto text-white"
+              >
                 increase
               </button>
             </div>
@@ -113,12 +150,7 @@ const Purchase = () => {
           </div>
         </div>
       </div>
-      <input
-        type="submit"
-        value="Confirm Order"
-        className="btn btn-primary  rounded text-lg mx-auto text-white w-5/12 md:mr-10 mt-5"
-      />
-    </form>
+    </div>
   );
 };
 

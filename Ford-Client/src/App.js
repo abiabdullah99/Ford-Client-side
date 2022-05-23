@@ -11,6 +11,7 @@ import PrivateRoute from "./components/Account/PrivateRoute";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Purchase from "./components/Order/Purchase";
+import NotFound from "./components/Shared/NotFound/NotFound";
 const App = () => {
   return (
     <div>
@@ -29,6 +30,7 @@ const App = () => {
               </PrivateRoute>
             }
           ></Route>
+          <Route path="*" element={<NotFound></NotFound>}></Route>
         </Routes>
         <Footer></Footer>
         <ToastContainer />
