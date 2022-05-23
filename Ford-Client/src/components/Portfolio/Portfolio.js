@@ -7,6 +7,7 @@ import watch from "../../Assets/portfolio/watch.png";
 import personal from "../../Assets/portfolio/personal.png";
 import "./Portfolio.css";
 import Timeline from "./Timeline";
+import Skills from "./Skills";
 const Portfolio = () => {
   return (
     <div>
@@ -32,6 +33,7 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
+      <Skills></Skills>
       <Timeline></Timeline>
     </div>
   );
