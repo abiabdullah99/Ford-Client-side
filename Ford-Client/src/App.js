@@ -17,6 +17,8 @@ import AddReview from "./components/Dashboard/AddReview/AddReview";
 import MyProfile from "./components/Dashboard/MyProfile/MyProfile";
 import MyOrders from "./components/Dashboard/MyOrder/MyOrders";
 import User from "./components/Dashboard/Admin/User/User";
+import RequirAdmin from "./components/Dashboard/Admin/RequirAdmin";
+import AddProducts from "./components/Dashboard/Admin/AddProducts/AddProducts";
 const App = () => {
   return (
     <div>
@@ -46,8 +48,23 @@ const App = () => {
           >
             <Route path="review" element={<AddReview></AddReview>}></Route>
             <Route path="profile" element={<MyProfile></MyProfile>}></Route>
-            <Route path="user" element={<User></User>}></Route>
             <Route index element={<MyOrders></MyOrders>}></Route>
+            <Route
+              path="user"
+              element={
+                <RequirAdmin>
+                  <User />
+                </RequirAdmin>
+              }
+            ></Route>
+            <Route
+              path="AddProduct"
+              element={
+                <RequirAdmin>
+                  <AddProducts />
+                </RequirAdmin>
+              }
+            ></Route>
           </Route>
           <Route path="*" element={<NotFound></NotFound>}></Route>
         </Routes>
