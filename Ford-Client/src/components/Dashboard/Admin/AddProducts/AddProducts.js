@@ -30,43 +30,43 @@ const AddProducts = () => {
           onSubmit={handleSubmit(onSubmitProdutFrom)}
         >
           <input
-            className="w-80 rounded border-2 border-primary  mb-5 py-4 px-10"
+            className="w-80 rounded border-2 text-xl text-secondary border-primary input input-bordered   mb-5 py-4 px-10"
             placeholder="Product Photo Url"
             type="text"
             {...register("img")}
           />
           <input
-            className="w-80 rounded border-2 border-primary  mb-5 py-4 px-10"
+            className="w-80 rounded border-2 text-xl text-secondary border-primary input input-bordered  mb-5 py-4 px-10"
             name="name"
             placeholder="Product Name"
             {...register("name", { required: true })}
           />
           <input
-            className="w-80 rounded  border-2 border-primary  mb-5 py-4 px-10"
+            className="w-80 rounded  border-2 text-xl text-secondary border-primary input input-bordered  mb-5 py-4 px-10"
             value={user.email}
             {...register("email", { required: true })}
           />
           <input
-            className="w-80 rounded border-2 border-solid border-primary  mb-5 py-4 px-10"
+            className="w-80 rounded border-2 border-solid text-xl text-secondary border-primary input input-bordered  mb-5 py-4 px-10"
             placeholder="Enter Price"
             type="number"
             {...register("price", { required: true })}
           />
           <input
-            className="w-80 rounded border-2 border-solid border-primary  mb-5 py-4 px-10"
+            className="w-80 rounded border-2 border-solid text-xl text-secondary border-primary input input-bordered  mb-5 py-4 px-10"
             placeholder="Enter Product Stock"
             type="number"
             {...register("stock", { required: true })}
           />
 
           <input
-            className="w-80 rounded border-2 border-solid border-primary  mb-5 py-4 px-10"
+            className="w-80 rounded border-2 border-solid text-xl text-secondary border-primary input input-bordered  mb-5 py-4 px-10"
             placeholder="Enter Minimum Order"
             type="number"
             {...register("min-order", { required: true })}
           />
-          <input
-            className="w-80 rounded border-2  border-primary  mb-5 py-4 px-10"
+          <textarea
+            className="rounded border-2  text-xl text-secondary border-primary input input-bordered  mb-5 py-4 px-10 h-32"
             placeholder="description"
             type="text"
             {...register("description", { required: true })}

@@ -30,35 +30,35 @@ const AddReview = () => {
         onSubmit={handleSubmit(onSubmitFrom)}
       >
         <input
-          className="w-80 rounded border-2 border-primary  mb-5 py-4 px-10"
+          className="w-80 rounded border-2 text-xl text-secondary  border-primary input input-bordered mb-5 py-4 px-10"
           placeholder="User Photo Url"
           type="text"
           {...register("img")}
         />
         <input
-          className="w-80 rounded border-2 border-primary  mb-5 py-4 px-10"
+          className="w-80 rounded border-2 text-xl text-secondary border-primary input input-bordered mb-5 py-4 px-10"
           placeholder="name"
           {...register("name", { required: true })}
         />
         <input
-          className="w-80 rounded  border-2 border-primary  mb-5 py-4 px-10"
+          className="w-80 rounded  border-2 text-xl text-secondary border-primary input input-bordered mb-5 py-4 px-10"
           value={user.email}
           {...register("email", { required: true })}
         />
         <input
-          className="w-80 rounded border-2 border-primary  mb-5 py-4 px-10"
+          className="w-80 rounded border-2 text-xl text-secondary border-primary input input-bordered mb-5 py-4 px-10"
           placeholder="description"
           type="text"
           {...register("description", { required: true })}
         />
         <input
-          className="w-80 rounded border-2 border-solid border-primary  mb-5 py-4 px-10"
+          className="w-80 rounded border-2 text-xl text-secondary border-solid border-primary input input-bordered mb-5 py-4 px-10"
           placeholder="address"
           type="text"
           {...register("address", { required: true })}
         />
         <input
-          className="w-80 rounded border-2 border-solid border-primary  mb-5 py-4 px-10"
+          className="w-80 rounded border-2 border-solid text-secondary border-primary input input-bordered text-xl  mb-5 py-4 px-10"
           placeholder="Rating 1 To 5"
           type="Number"
           {...register("rating", { required: true })}

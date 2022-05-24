@@ -107,7 +107,11 @@ const CheckoutForm = ({ order }) => {
             },
           }}
         />
-        <button type="submit" className="btn btn-outline btn-primary mt-10 text-lg" disabled={!stripe}>
+        <button
+          type="submit"
+          className="btn btn-outline btn-primary mt-10 text-lg"
+          disabled={!stripe}
+        >
           Pay Now
         </button>
       </form>
