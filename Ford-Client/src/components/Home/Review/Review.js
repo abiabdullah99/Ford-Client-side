@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination } from "swiper";
 const Review = () => {
   const [review] = UseReview();
-  const reverse = [...review].reverse()
+  const reverse = [...review].reverse();
   return (
     <>
       <h1 className="mt-40 text-center text-3xl capitalize text-primary font-semibold">
@@ -52,6 +52,9 @@ const Review = () => {
                     <div>
                       <h2 class="card-title text-primary">{item.name}</h2>
                       <p>{item.address}</p>
+                      <p>
+                        Client Rating: <span className="text-primary"> {item.rating} &#x2605; &#x2605;</span>
+                      </p>
                     </div>
                   </div>
                 </div>

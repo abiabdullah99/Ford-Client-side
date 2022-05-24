@@ -58,6 +58,12 @@ const AddReview = () => {
           {...register("address", { required: true })}
         />
         <input
+          className="w-80 rounded border-2 border-solid border-primary  mb-5 py-4 px-10"
+          placeholder="Rating 1 To 5"
+          type="Number"
+          {...register("rating", { required: true })}
+        />
+        <input
           className="product-btn rounded bg-primary py-4 text-white text-xl"
           type="Submit"
           value="Post Review"

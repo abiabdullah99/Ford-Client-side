@@ -81,7 +81,7 @@ const MyOrders = () => {
                 </td>
                 <td className="text-lg text-secondary">{item.email}</td>
                 <td className="text-lg text-secondary">{item.product}</td>
-                <td className="text-lg text-secondary">{item.price}</td>
+                <td className="text-lg text-secondary">${item.price}</td>
                 <td>
                   <button className="btn btn-success btn-xs text-white">
                     Pay

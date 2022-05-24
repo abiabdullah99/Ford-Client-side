@@ -6,7 +6,7 @@ const AllProducts = () => {
   const reverse = [...product].reverse();
   return (
     <div>
-      <div className="h-full">
+      <div>
         <h2 className="text-center text-4xl font-bold text-primary">
           All{" "}
           <span className="border-primary border-b-4 text-secondary">
