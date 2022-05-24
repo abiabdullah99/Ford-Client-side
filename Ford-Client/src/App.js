@@ -21,6 +21,7 @@ import RequirAdmin from "./components/Dashboard/Admin/RequirAdmin";
 import AddProducts from "./components/Dashboard/Admin/AddProducts/AddProducts";
 import AllProducts from "./components/Dashboard/Admin/AllProducts/AllProducts";
 import ManageOrder from "./components/Dashboard/Admin/ManageOrder/ManageOrder";
+import Payment from "./components/Dashboard/Payment/Payment";
 const App = () => {
   return (
     <div>
@@ -49,6 +50,7 @@ const App = () => {
             }
           >
             <Route path="review" element={<AddReview></AddReview>}></Route>
+            <Route path="payment/:id" element={<Payment></Payment>}></Route>
             <Route path="profile" element={<MyProfile></MyProfile>}></Route>
             <Route index element={<MyOrders></MyOrders>}></Route>
             <Route
