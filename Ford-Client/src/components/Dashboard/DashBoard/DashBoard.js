@@ -21,6 +21,9 @@ const DashBoard = () => {
             <li className="text-secondary text-lg font-semibold">
               <NavLink to="/dashboard/profile">My Profile</NavLink>
             </li>
+            <li className="text-secondary text-lg font-semibold">
+              <NavLink to="/dashboard/user">All User</NavLink>
+            </li>
           </ul>
         </div>
       </div>

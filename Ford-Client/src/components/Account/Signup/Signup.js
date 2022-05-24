@@ -1,4 +1,3 @@
-import { async } from "@firebase/util";
 import React, { useEffect, useState } from "react";
 import {
   useCreateUserWithEmailAndPassword,
@@ -8,6 +7,7 @@ import {
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import auth from "../../../firebase.init";
+import UseToken from "../../../Hooks/UseToken";
 import Loading from "../../Shared/Loading/Loading";
 const Signup = () => {
   const [userInfo, setUserInfo] = useState({
@@ -24,8 +24,12 @@ const Signup = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
 
+
   // Google Singing
   const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
+
+
+  const [token] = UseToken(user || guser)
 
   const handleEmailChange = (e) => {
     const emailRegex = /\S+@\S+\.\S+/;
@@ -69,10 +73,10 @@ const Signup = () => {
   const from = location?.state?.from?.pathname || "/";
 
   useEffect(() => {
-    if (user || guser) {
+    if (token) {
       navigate(from);
     }
-  }, [user, guser]);
+  }, [token, user]);
 
   useEffect(() => {
     const errors = error || gerror;

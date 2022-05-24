@@ -56,7 +56,7 @@ const Purchase = () => {
       price,
       img,
       email: user.email,
-      user: event.target.name.value,
+      user: user.displayName,
       phone: event.target.phone.value,
       address: event.target.address.value,
       stock,
@@ -79,6 +79,7 @@ const Purchase = () => {
         <input
           type="text"
           name="name"
+          value={user?.displayName}
           placeholder="Enter Your Name"
           className="rounded input input-bordered border-2 border-primary text-secondary text-lg mb-5 w-full max-w-xs"
         />

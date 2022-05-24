@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination } from "swiper";
 const Review = () => {
   const [review] = UseReview();
+  const reverse = [...review].reverse()
   return (
     <>
       <h1 className="mt-40 text-center text-3xl capitalize text-primary font-semibold">
@@ -37,7 +38,7 @@ const Review = () => {
         className="mySwiper w-10/12"
       >
         <>
-          {review.map((item) => (
+          {reverse.map((item) => (
             <SwiperSlide>
               <div class="card w-11/12 bg-base-100 shadow-md rounded mb-16 mt-20 h-64 shadow-primary">
                 <div class="card-body text-secondary">

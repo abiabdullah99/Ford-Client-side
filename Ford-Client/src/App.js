@@ -16,6 +16,7 @@ import DashBoard from "./components/Dashboard/DashBoard/DashBoard";
 import AddReview from "./components/Dashboard/AddReview/AddReview";
 import MyProfile from "./components/Dashboard/MyProfile/MyProfile";
 import MyOrders from "./components/Dashboard/MyOrder/MyOrders";
+import User from "./components/Dashboard/Admin/User/User";
 const App = () => {
   return (
     <div>
@@ -45,6 +46,7 @@ const App = () => {
           >
             <Route path="review" element={<AddReview></AddReview>}></Route>
             <Route path="profile" element={<MyProfile></MyProfile>}></Route>
+            <Route path="user" element={<User></User>}></Route>
             <Route index element={<MyOrders></MyOrders>}></Route>
           </Route>
           <Route path="*" element={<NotFound></NotFound>}></Route>

@@ -7,6 +7,7 @@ import {
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import auth from "../../../firebase.init";
+import UseToken from "../../../Hooks/UseToken";
 import Loading from "../../Shared/Loading/Loading";
 const Login = () => {
   const [userInfo, setUserInfo] = useState({
@@ -59,17 +60,20 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(userInfo.email, userInfo.password);
+    toast.success("Login Succesfull");
   };
 
   const navigate = useNavigate();
   const location = useLocation();
   const from = location?.state?.from?.pathname || "/";
 
+  const [token] = UseToken(user || guser);
+
   useEffect(() => {
-    if (user || guser) {
+    if (token) {
       navigate(from);
     }
-  }, [user, guser]);
+  }, [token, user, guser]);
 
   const restPassword = async () => {
     const email = userInfo.email;

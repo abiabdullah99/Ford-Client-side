@@ -3,7 +3,7 @@ import React from 'react';
 const Loading = () => {
     return (
         <div>
-            <button class="btn-square loading"></button>
+            <p className='text-xl text-white'>Loading....</p>
         </div>
     );
 };

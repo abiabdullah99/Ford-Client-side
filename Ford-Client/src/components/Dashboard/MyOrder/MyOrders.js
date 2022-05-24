@@ -1,5 +1,7 @@
+import { signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { Navigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import auth from "../../../firebase.init";
 
@@ -9,8 +11,21 @@ const MyOrders = () => {
   useEffect(() => {
     const email = user.email;
     const url = `https://salty-fortress-85484.herokuapp.com/myitems?email=${email}`;
-    fetch(url)
-      .then((res) => res.json())
+    fetch(url, {
+      method: "GET",
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+    })
+      .then((res) => {
+        console.log("res", res);
+        if (res.status === 401 || res.status === 403) {
+          signOut(auth);
+          localStorage.removeItem("accessToken");
+          Navigate("/");
+        }
+        return res.json();
+      })
       .then((data) => setmyOrders(data));
   }, [user]);
   console.log(myOrders);
