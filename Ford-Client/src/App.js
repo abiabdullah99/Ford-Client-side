@@ -19,9 +19,8 @@ import MyOrders from "./components/Dashboard/MyOrder/MyOrders";
 import User from "./components/Dashboard/Admin/User/User";
 import RequirAdmin from "./components/Dashboard/Admin/RequirAdmin";
 import AddProducts from "./components/Dashboard/Admin/AddProducts/AddProducts";
-import ManageProducts from "./components/Dashboard/Admin/AllProducts/AllProducts";
-import ManageProduct from "./components/Dashboard/Admin/ManageProduct/ManageProduct";
 import AllProducts from "./components/Dashboard/Admin/AllProducts/AllProducts";
+import ManageOrder from "./components/Dashboard/Admin/ManageOrder/ManageOrder";
 const App = () => {
   return (
     <div>
@@ -77,10 +76,10 @@ const App = () => {
               }
             ></Route>
             <Route
-              path="manageProduct"
+              path="manageOrder"
               element={
                 <RequirAdmin>
-                  <ManageProduct />
+                  <ManageOrder />
                 </RequirAdmin>
               }
             ></Route>

@@ -121,7 +121,7 @@ const Purchase = () => {
             <span className="text-primary">Stock:</span> {stock} Pieces
           </h1>
           <h1 className="pb-2 text-lg font-semibold text-secondary">
-            <span className="text-primary">Minimum Order:</span> {minorder}{" "}
+            <span className="text-primary">Minimum Order:</span> {minorder}
             Pieces
           </h1>
         </div>

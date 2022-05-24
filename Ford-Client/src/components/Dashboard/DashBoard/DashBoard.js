@@ -16,23 +16,34 @@ const DashBoard = () => {
         </div>
         <div class="drawer-side">
           <label for="dashboard-sidebar" class="drawer-overlay"></label>
-          <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+          <ul class="menu p-4 overflow-y-auto w-80  text-base-content">
             <li className="mb-4 text-secondary text-lg font-semibold">
               <NavLink to="/dashboard">My Orders</NavLink>
             </li>
             <li className="mb-4 text-secondary text-lg font-semibold">
               <NavLink to="/dashboard/review">Add Reviews</NavLink>
             </li>
-            <li className="text-secondary text-lg font-semibold">
+            <li className="text-secondary text-lg font-semibold mb-4">
               <NavLink to="/dashboard/profile">My Profile</NavLink>
             </li>
             {admin && (
-              <li className="text-secondary text-lg font-semibold">
-                <NavLink to="/dashboard/user">All User</NavLink>
-                <NavLink to="/dashboard/AddProduct">Add Products</NavLink>
-                <NavLink to="/dashboard/manage">Manage All Products</NavLink>
-                <NavLink to="/dashboard/manageProduct">Manage Products</NavLink>
-              </li>
+              <ul>
+                <li className="text-secondary text-lg font-semibold mb-4">
+                  <NavLink to="/dashboard/user">Make Admin</NavLink>
+                </li>
+                <li className="text-secondary text-lg font-semibold mb-4">
+                  <NavLink to="/dashboard/AddProduct">Add Products</NavLink>
+                </li>
+
+                <li className="text-secondary text-lg font-semibold mb-4">
+                  <NavLink to="/dashboard/manage">Manage Products</NavLink>
+                </li>
+                <li className="text-secondary text-lg font-semibold mb-4">
+                  <NavLink to="/dashboard/manageOrder">
+                    Manage All Orders
+                  </NavLink>
+                </li>
+              </ul>
             )}
           </ul>
         </div>

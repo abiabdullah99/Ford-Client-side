@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import useProducts from "../../../Hooks/UseProducts";
 const Product = () => {
   const [product] = useProducts();
+  const reverse = [...product].reverse();
   const navigate = useNavigate();
   const navigateToDetails = (id) => {
     navigate(`/purchase/${id}`);
@@ -16,11 +17,11 @@ const Product = () => {
         </span>
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:px-32 mt-20 mb-10 ">
-        {product.map((item) => (
+        {reverse.slice(0, 6).map((item) => (
           <div key={item._id}>
             <div class="card w-10/12 mx-auto mb-10 shadow-primary rounded shadow-md relative lg:h-[620px]">
               <figure class="px-10 pt-10">
-                <img src={item.img} alt="Shoes" class="rounded-xl" />
+                <img src={item.img} alt="Shoes" class="rounded-xl h-64 w-72" />
               </figure>
               <div class="card-body">
                 <h2 class="card-title text-secondary">
@@ -40,7 +41,7 @@ const Product = () => {
                   <span className="text-primary">{item.minorder} Pieces</span>
                 </p>
                 <p className="text-secondary mb-8 font-semibold">
-                  {item.description.slice(0, 45)}
+                  {item.description.slice(0, 40)}...
                 </p>
               </div>
               <div>

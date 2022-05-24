@@ -31,7 +31,7 @@ const AddReview = () => {
       >
         <input
           className="w-80 rounded border-2 border-primary  mb-5 py-4 px-10"
-          placeholder="User Photo"
+          placeholder="User Photo Url"
           type="text"
           {...register("img")}
         />
