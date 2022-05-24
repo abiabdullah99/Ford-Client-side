@@ -19,6 +19,9 @@ import MyOrders from "./components/Dashboard/MyOrder/MyOrders";
 import User from "./components/Dashboard/Admin/User/User";
 import RequirAdmin from "./components/Dashboard/Admin/RequirAdmin";
 import AddProducts from "./components/Dashboard/Admin/AddProducts/AddProducts";
+import ManageProducts from "./components/Dashboard/Admin/AllProducts/AllProducts";
+import ManageProduct from "./components/Dashboard/Admin/ManageProduct/ManageProduct";
+import AllProducts from "./components/Dashboard/Admin/AllProducts/AllProducts";
 const App = () => {
   return (
     <div>
@@ -62,6 +65,22 @@ const App = () => {
               element={
                 <RequirAdmin>
                   <AddProducts />
+                </RequirAdmin>
+              }
+            ></Route>
+            <Route
+              path="manage"
+              element={
+                <RequirAdmin>
+                  <AllProducts />
+                </RequirAdmin>
+              }
+            ></Route>
+            <Route
+              path="manageProduct"
+              element={
+                <RequirAdmin>
+                  <ManageProduct />
                 </RequirAdmin>
               }
             ></Route>

@@ -30,6 +30,8 @@ const DashBoard = () => {
               <li className="text-secondary text-lg font-semibold">
                 <NavLink to="/dashboard/user">All User</NavLink>
                 <NavLink to="/dashboard/AddProduct">Add Products</NavLink>
+                <NavLink to="/dashboard/manage">Manage All Products</NavLink>
+                <NavLink to="/dashboard/manageProduct">Manage Products</NavLink>
               </li>
             )}
           </ul>
