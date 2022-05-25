@@ -45,12 +45,14 @@ const ManageOrder = () => {
                   <td className="text-lg text-secondary">{item.price}</td>
                   <td>
                     {item.price && !item.paid && (
-                      <button className="btn btn-success btn-xs text-white">
+                      <button className="btn btn-outline btn-primary btn-sm text-secondary">
                         Pay
                       </button>
                     )}
                     {item.price && item.paid && (
-                      <span className="text-primary font-semibold text-lg">Paid</span>
+                      <span className="text-primary font-semibold text-lg">
+                        Paid
+                      </span>
                     )}
                   </td>
                 </tr>

@@ -38,12 +38,16 @@ const Navbar = ({ children }) => {
         </NavLink>
       </li>
       <li>
-        <NavLink
-          to="/dashboard"
-          className="rounded-md mr-2 text-secondary text-lg font-semibold p-0 px-5"
-        >
-          Dashboard
-        </NavLink>
+        {user ? (
+          <NavLink
+            to="/dashboard"
+            className="rounded-md mr-2 text-secondary text-lg font-semibold p-0 px-5"
+          >
+            Dashboard
+          </NavLink>
+        ) : (
+          " "
+        )}
       </li>
       <li>
         {user ? (
@@ -95,8 +99,8 @@ const Navbar = ({ children }) => {
       <div class="drawer-content flex flex-col font-mono">
         <div class="w-full navbar h-20 lg:px-20">
           <label
-            tabindex="0"
-            for="my-drawer-2"
+            tabIndex="1"
+            for="dashboard-sidebar"
             class="btn btn-ghost lg:hidden "
           >
             <svg
