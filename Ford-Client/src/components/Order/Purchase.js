@@ -19,6 +19,8 @@ const Purchase = () => {
       .then((res) => res.json())
       .then((data) => setOrder(data));
   }, [id, newData]);
+
+  
   const { _id, img, minorder, stock, price } = order;
   let name, value;
   const getUserData = (e) => {
@@ -94,7 +96,7 @@ const Purchase = () => {
       });
   };
   return (
-    <div className="grid grid-cols-1 my-10 w-10/12 mx-auto items-center lg:grid-cols-2">
+    <div className="grid grid-cols-1 my-10 w-9/12 mx-auto items-center lg:grid-cols-2">
       <form onSubmit={handleBooking} className="flex flex-col">
         <input
           type="text"

@@ -24,12 +24,10 @@ const Signup = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
 
-
   // Google Singing
   const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
 
-
-  const [token] = UseToken(user || guser)
+  const [token] = UseToken(user || guser);
 
   const handleEmailChange = (e) => {
     const emailRegex = /\S+@\S+\.\S+/;
@@ -63,8 +61,9 @@ const Signup = () => {
   const handleSignUp = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
+    const photoURL = e.target.name.value;
     await createUserWithEmailAndPassword(userInfo.email, userInfo.password);
-    await updateProfile({ displayName: name });
+    await updateProfile({ displayName: name }, { photoURL: photoURL });
     toast.success("Sign Up Succesfull");
   };
 
@@ -112,6 +111,15 @@ const Signup = () => {
               type="text"
               placeholder="Enter Your Name"
               required
+            />
+          </div>
+          <div>
+            <input
+              className="input input-bordered border-primary w-full text-lg my-4"
+              type="photoURL"
+              name="photoURL"
+              required
+              placeholder="Enter Your PhotoUrl"
             />
           </div>
           <div>
