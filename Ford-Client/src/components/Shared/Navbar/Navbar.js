@@ -38,6 +38,14 @@ const Navbar = ({ children }) => {
         </NavLink>
       </li>
       <li>
+        <NavLink
+          to="/shop"
+          className="rounded-md mr-2 text-secondary text-lg font-semibold p-0 px-5"
+        >
+          Shop
+        </NavLink>
+      </li>
+      <li>
         {user ? (
           <NavLink
             to="/dashboard"

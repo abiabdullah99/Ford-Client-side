@@ -10,7 +10,7 @@ const Purchase = () => {
   const [order, setOrder] = useState([]);
   const [newData, setNewData] = useState(false);
   const [stockNumber, setStockNumber] = useState({
-    stock: "",
+    stockitem: "",
   });
   const { id } = useParams();
   useEffect(() => {
@@ -19,7 +19,7 @@ const Purchase = () => {
       .then((res) => res.json())
       .then((data) => setOrder(data));
   }, [id, newData]);
-
+  const { _id, img, minorder, stock, price } = order;
   let name, value;
   const getUserData = (e) => {
     e.preventDefault();
@@ -27,24 +27,44 @@ const Purchase = () => {
     value = e.target.value;
     setStockNumber({ ...stockNumber, [name]: value });
   };
-  const { _id, img, minorder, stock, price } = order;
 
-  const handleUpdateStock = async (id, stock) => {
-    const { stockitem } = stockNumber;
-    console.log(stockitem);
-    console.log(stock)
-    const getStock = parseInt(stock) - parseInt(stockitem);
+  const handleUpdate = async (id, quantity) => {
+    console.log("stock", quantity);
+    const { stock } = stockNumber;
+    const getQuantity = parseInt(stock) + parseInt(quantity);
+
     const newQuantity = {
-      stock: getStock.toString(),
+      quantity: getQuantity.toString(),
     };
     console.log(newQuantity);
+
+    // send data to the monogod server and update
     const url = `https://salty-fortress-85484.herokuapp.com/products/${id}`;
     await axios.put(url, newQuantity).then((response) => {
       const { data } = response;
       if (data) {
         setNewData(!newData);
       }
-      console.log(data);
+    });
+  };
+
+  const handleDecrease = async (id, quantity) => {
+    console.log("stock", quantity);
+    const { stock } = stockNumber;
+    const getQuantity = parseInt(quantity) - parseInt(stock);
+
+    const newQuantity = {
+      quantity: getQuantity.toString(),
+    };
+    console.log(newQuantity);
+
+    // send data to the monogod server and update
+    const url = `https://salty-fortress-85484.herokuapp.com/products/${id}`;
+    await axios.put(url, newQuantity).then((response) => {
+      const { data } = response;
+      if (data) {
+        setNewData(!newData);
+      }
     });
   };
 
@@ -128,7 +148,7 @@ const Purchase = () => {
 
         <div>
           <input
-            type="text"
+            type="number"
             name="stock"
             onChange={getUserData}
             placeholder="UpDate Minimum Order"
@@ -137,14 +157,17 @@ const Purchase = () => {
           <div className="flex gap-5 mb-10">
             <div>
               <button
-                onClick={() => handleUpdateStock(_id, order.stock)}
+                onClick={() => handleUpdate(_id, order.stock)}
                 className="btn btn-primary btn-outline border-2 rounded text-lg mx-auto text-white"
               >
                 increase
               </button>
             </div>
             <div>
-              <button className="btn btn-primary btn-outline border-2 rounded text-lg mx-auto text-white">
+              <button
+                onClick={() => handleDecrease(_id, order.stock)}
+                className="btn btn-primary btn-outline border-2 rounded text-lg mx-auto text-white"
+              >
                 decrease
               </button>
             </div>

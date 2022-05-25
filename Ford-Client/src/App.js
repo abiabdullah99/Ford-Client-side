@@ -22,21 +22,30 @@ import AddProducts from "./components/Dashboard/Admin/AddProducts/AddProducts";
 import AllProducts from "./components/Dashboard/Admin/AllProducts/AllProducts";
 import ManageOrder from "./components/Dashboard/Admin/ManageOrder/ManageOrder";
 import Payment from "./components/Dashboard/Payment/Payment";
+import Shop from "./components/Shop/Shop";
 const App = () => {
   return (
     <div>
       <Navbar>
         <Routes>
-          <Route path="/" element={<Home></Home>}></Route>
-          <Route path="/blog" element={<Blogs></Blogs>}></Route>
-          <Route path="/portfolio" element={<Portfolio></Portfolio>}></Route>
-          <Route path="/login" element={<Login></Login>}></Route>
-          <Route path="/signup" element={<Signup></Signup>}></Route>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/blog" element={<Blogs />}></Route>
+          <Route path="/portfolio" element={<Portfolio />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/signup" element={<Signup />}></Route>
           <Route
             path="/purchase/:id"
             element={
               <PrivateRoute>
-                <Purchase></Purchase>
+                <Purchase />
+              </PrivateRoute>
+            }
+          ></Route>
+          <Route
+            path="/shop"
+            element={
+              <PrivateRoute>
+                <Shop />
               </PrivateRoute>
             }
           ></Route>
@@ -49,10 +58,10 @@ const App = () => {
               </PrivateRoute>
             }
           >
-            <Route path="review" element={<AddReview></AddReview>}></Route>
-            <Route path="payment/:id" element={<Payment></Payment>}></Route>
-            <Route index element={<MyProfile></MyProfile>}></Route>
-            <Route path="myorders" element={<MyOrders></MyOrders>}></Route>
+            <Route path="review" element={<AddReview />}></Route>
+            <Route path="payment/:id" element={<Payment />}></Route>
+            <Route index element={<MyProfile />}></Route>
+            <Route path="myorders" element={<MyOrders />}></Route>
             <Route
               path="user"
               element={
