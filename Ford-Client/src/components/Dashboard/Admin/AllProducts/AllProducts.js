@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
+import { toast } from "react-toastify";
 import useProducts from "../../../../Hooks/UseProducts";
 
 const AllProducts = () => {
   const [product] = useProducts();
   const reverse = [...product].reverse();
+  const [myProduct, setProduct] = useState([]);
+  const handleDeleteProduct = (id) => {
+    const proced = window.confirm("Are Your Sure Delete Items");
+    if (proced) {
+      const url = `https://salty-fortress-85484.herokuapp.com/products/${id}`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          const reamingData = myProduct.filter((product) => product._id !== id);
+          setProduct(reamingData);
+          toast.success("Your Product Succesfully deleted");
+        });
+    }
+  };
   return (
     <div>
       <div>
@@ -46,7 +63,10 @@ const AllProducts = () => {
                   </p>
                 </div>
                 <div>
-                  <button className="w-full bg-primary absolute bottom-0 py-2 mx-0 text-white text-xl font-bold">
+                  <button
+                    onClick={() => handleDeleteProduct(item._id)}
+                    className="w-full bg-primary absolute bottom-0 py-2 mx-0 text-white text-xl font-bold"
+                  >
                     Delete
                   </button>
                 </div>

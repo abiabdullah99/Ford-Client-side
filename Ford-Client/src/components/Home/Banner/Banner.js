@@ -28,16 +28,14 @@ const Banner = () => {
             <div class="hero-content flex-col lg:flex-row-reverse">
               <img className="" src={banner} alt="" />
               <div>
-                <h1 class="text-5xl font-bold text-primary">
-                  Box Office News!
-                </h1>
+                <h1 class="text-5xl font-bold text-primary">Electric Drill</h1>
                 <p class="py-6 text-secondary">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+                  An electric drill is a drill which is driven by an electric
+                  motor. The invention of the electric drill is credited to
+                  Arthur James Arnot and William Blanch
                 </p>
-                <button class="btn btn-primary text-white text-md">
-                  Get Started
+                <button class="btn btn-primary text-lg text-white text-md">
+                  Expolre
                 </button>
               </div>
             </div>
@@ -49,16 +47,13 @@ const Banner = () => {
             <div class="hero-content flex-col lg:flex-row-reverse">
               <img className="w-9/12" src={banner1} alt="" />
               <div>
-                <h1 class="text-5xl font-bold text-primary">
-                  Box Office News!
-                </h1>
+                <h1 class="text-5xl font-bold text-primary">Chain Saw</h1>
                 <p class="py-6 text-secondary">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+                  TOPWE CN-5803 58cc 2200W 2-Stroke professional China chainsaw
+                  Chain Saw gasoline pole chainsaw
                 </p>
-                <button class="btn btn-primary text-white text-md">
-                  Get Started
+                <button class="btn text-lg btn-primary text-white text-md">
+                  Expolre
                 </button>
               </div>
             </div>
@@ -70,5 +65,3 @@ const Banner = () => {
 };
 
 export default Banner;
-
-

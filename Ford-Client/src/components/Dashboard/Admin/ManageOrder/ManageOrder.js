@@ -46,12 +46,12 @@ const ManageOrder = () => {
                   <td>
                     {item.price && !item.paid && (
                       <button className="btn btn-outline btn-primary btn-sm text-secondary">
-                        Pay
+                        Un Paid
                       </button>
                     )}
                     {item.price && item.paid && (
                       <span className="text-primary font-semibold text-lg">
-                        Paid
+                        Pending
                       </span>
                     )}
                   </td>
