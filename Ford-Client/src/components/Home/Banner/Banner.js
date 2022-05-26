@@ -25,9 +25,9 @@ const Banner = () => {
       >
         <SwiperSlide>
           <div class="hero min-h-screen background">
-            <div class="hero-content flex-col lg:flex-row-reverse">
-              <img className="" src={banner} alt="" />
-              <div>
+            <div class="hero-content flex-col  lg:flex-row-reverse">
+              <img className="" data-aos="fade-left" data-aos-duration="2000" src={banner} alt="" />
+              <div data-aos="fade-right" data-aos-duration="2000">
                 <h1 class="text-5xl font-bold text-primary">Electric Drill</h1>
                 <p class="py-6 text-secondary">
                   An electric drill is a drill which is driven by an electric

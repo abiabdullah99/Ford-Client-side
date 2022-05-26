@@ -23,7 +23,10 @@ import AllProducts from "./components/Dashboard/Admin/AllProducts/AllProducts";
 import ManageOrder from "./components/Dashboard/Admin/ManageOrder/ManageOrder";
 import Payment from "./components/Dashboard/Payment/Payment";
 import Shop from "./components/Shop/Shop";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const App = () => {
+  AOS.init();
   return (
     <div>
       <Navbar>
