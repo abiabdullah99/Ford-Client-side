@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Ford Manufacturer Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Website Link: [https://ford-client.web.app/](https://ford-client.web.app/)
 
-## Available Scripts
+Server Side Link : [https://salty-fortress-85484.herokuapp.com/](https://salty-fortress-85484.herokuapp.com/)
 
-In the project directory, you can run:
+## Total Pages: 07
 
-### `npm start`
+1.  Homepage
+2.  Blog Page
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3.  404 Not Found Page
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4.  login page
 
-### `npm test`
+5.  SignUp page
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+6.  Portfolio Page
 
-### `npm run build`
+7.  Dashboard
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Users Pages
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. My Orders
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Reviews
 
-### `npm run eject`
+## Admin Pages
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1.  Manage Product
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2.  Add Products
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3.  All Orders Review
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Technology Use : 06
 
-## Learn More
+1. Html
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Css
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Tailwind css
 
-### Code Splitting
+4. React
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+5. React Router
 
-### Analyzing the Bundle Size
+6. Firebase
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+7. Node js
 
-### Making a Progressive Web App
+8. Express js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+9. Mongodb
 
-### Advanced Configuration
+## Tech Stack:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1.  React [</ Documentation>](https://reactjs.org/docs/getting-started.html)
 
-### Deployment
+2.  Firebase [</ Documentation>](https://firebase.google.com/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+3.  React Router Dom [</ Documentation>](https://reactrouter.com/docs/en/v6/getting-started/overview)
 
-### `npm run build` fails to minify
+4.  React FireBase Hooks [</ Documentation>](https://github.com/CSFrequency/react-firebase-hooks)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5.  Aos Animation [</ Documentation>](https://michalsnik.github.io/aos/)
+
+6.  Tailwind Css [</ Documentation>](https://tailwindcss.com/docs/guides/create-react-app)
+
+7.  React Toastify [</ Documentation>](https://fkhadra.github.io/react-toastify/introduction)
+
+8.  React Icons [</ Documentation>](https://react-icons.github.io/react-icons/search)
+
+9.  MongoDb [</ Documentation>](https://www.mongodb.com/)
