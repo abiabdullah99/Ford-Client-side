@@ -19,11 +19,13 @@ Server Side Link : [https://salty-fortress-85484.herokuapp.com/](https://salty-f
 
 7.  Dashboard
 
-## Users Pages
+## Users Pages 02
 
 1. My Orders
 
 2. Reviews
+
+3. My Profile
 
 ## Admin Pages
 
@@ -32,6 +34,8 @@ Server Side Link : [https://salty-fortress-85484.herokuapp.com/](https://salty-f
 2.  Add Products
 
 3.  All Orders Review
+
+4. My Profile
 
 ## Technology Use : 06
 
